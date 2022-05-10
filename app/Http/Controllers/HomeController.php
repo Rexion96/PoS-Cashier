@@ -44,7 +44,7 @@ class HomeController extends Controller
             $order->save();
 
             //Loop for every order items
-            for ($i = 1; $i <= 6; $i++){
+            for ($i = 1; $i <= Product::get()->count(); $i++){
 
                 $check_if_form_exist = $payload['product_P'.$i.'_quantity'] ?? null;
 
